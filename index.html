@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Basic Defense Game</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: absolute; color: white; padding: 10px; font-family: sans-serif; font-size: 14px; user-select: none;">
+        <span>Score: <span id="scoreEl">0</span></span>
+    </div>
+    <div
+    id="modalEl"
+    style="
+        display: none;
+        position: absolute;
+        background-color: white;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        padding: 16px;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+        ">
+        <label style="font-weight: bold;font-size: 14px; color: grey;">Game Over</label>
+        <h2 id="modalScoreEl" style="font-size: 48px; margin-bottom: 0; margin-top: 8px;">0</h2>
+        <p style="margin: 0; font-weight: bold; font-size: 14px; color: gray;">Points</p>
+
+        <button id="buttonEl" style="margin-top: 12px; background-color: blue; border: none; color: white; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Restart Game</button>
+    </div>
+    <div
+    id="startModalEl"
+    style="
+        position: absolute;
+        background-color: white;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        padding: 16px;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+        ">
+        <h1 style="font-size: 24px; margin-bottom: 0; margin-top: 8px;">Base Defense Game</h1>
+
+        <button id="startButtonEl" style="margin-top: 12px; background-color: blue; border: none; color: white; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Start</button>
+    </div>
+    <canvas></canvas>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
